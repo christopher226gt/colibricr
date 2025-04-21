@@ -1,0 +1,307 @@
+/* ===================================
+   SLIDER PRINCIPAL
+=================================== */
+
+/* Contenedor principal del slider */
+#slides {
+    position: relative;
+    width: 100%;
+    height: 87vh;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Lista de slides */
+.slides-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Cada slide (imagen) */
+.slides-container li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Imágenes de cada slide */
+.slides-container li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Capa oscura encima de la imagen */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+
+/* ===================================
+   CONTENIDO DE LAS DIAPOSITIVAS
+=================================== */
+
+.slide-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+}
+
+/* Mitad izquierda del contenido */
+.left-content {
+    flex: 1;
+    text-align: left;
+}
+
+/* Mitad derecha del contenido */
+.right-content {
+    flex: 1;
+    text-align: right;
+}
+
+/* Título principal */
+.slide-content h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ff8900;
+}
+
+/* Subparte del título con otro color */
+.slide-content h2 span {
+    color: #f4f1eb;
+}
+
+/* Estilo especial para contenido de la diapositiva 1 */
+.slide-content .titulo_slide_dpv1 {
+    padding-bottom: 100px;
+}
+
+/* Título de la diapositiva 1 */
+.slide-content .titulo_slide_dpv1 h2 {
+    color: #ff8900;
+}
+
+/* Párrafo de la diapositiva 1 */
+.slide-content .titulo_slide_dpv1 p {
+    color: #ffffff;
+    font-size: 1.6rem;
+    text-align: left;
+}
+
+/* Subtítulo de la diapositiva 1 */
+.slide-content .titulo_slide_dpv1 p.subtitulo {
+    color: #ff8900 !important;
+}
+
+/* Estilo común para subtítulos */
+.subtitulo {
+    font-size: 1.8rem;
+    color: #ff8900;
+}
+
+/* Texto en la parte derecha */
+.right-content p {
+    font-size: 1.6rem;
+    color: #ffffff;
+    padding-top: 200px;
+}
+
+/* Botón de reservar */
+.btn-reservar {
+    display: inline-block;
+    background: #ff8900;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+/* ===================================
+   NAVEGACIÓN Y CONTROLES DEL SLIDER
+=================================== */
+
+/* Flechas de navegación */
+.slides-navigation {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 20px;
+}
+
+.slides-navigation a {
+    background: #754a23;
+    color: white;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.slides-navigation a:hover {
+    background: #ff8900;
+}
+
+/* Indicadores (burbujas inferiores) */
+.slide-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.slide-indicators span {
+    width: 12px;
+    height: 12px;
+    background: #8d8176;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.slide-indicators span.active {
+    background: #ff8900;
+}
+
+/* ===================================
+   BOTONES WAZE Y MAPS
+=================================== */
+
+.link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #e07700;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background 0.3s ease;
+}
+
+.link-btn:hover {
+    background-color: #ff8900;
+}
+
+/* ===================================
+   RESPONSIVE - PANTALLAS PEQUEÑAS
+=================================== */
+
+@media (max-width: 768px) {
+    .slide-content {
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+    }
+
+    .left-content,
+    .right-content {
+        text-align: center;
+    }
+
+    .slide-content h2 {
+        font-size: 2rem;
+    }
+
+    .subtitulo {
+        font-size: 1.2rem;
+    }
+
+    .right-content p {
+        font-size: 1rem;
+    }
+
+    .btn-wrapper {
+        bottom: 5%;
+    }
+
+    .btn-reservar {
+        font-size: 0.5rem;
+        padding: 5px 10px;
+    }
+
+    /* Tamaño reducido para flechas */
+    .slides-navigation a {
+        font-size: 20px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .slide-indicators span {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* Contenido específico de la diapositiva 1 */
+    .slide-content .titulo_slide_dpv1 h2 {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .slide-content .titulo_slide_dpv1 p {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .slide-content .titulo_slide_dpv1 p.subtitulo {
+        font-weight: bold;
+    }
+
+    /* Oculta los saltos de línea forzados */
+    .slide-content p[data-i18n="slider.description"] br {
+        display: none;
+    }
+
+    /* Oculta las flechas de navegación */
+    .slides-navigation {
+        display: none !important;
+    }
+
+    .slide-content .titulo_slide_dpv1 {
+        padding-bottom: 150px;
+    }
+
+    .btn-wrapper {
+        padding-bottom: 100px;
+    }
+
+    /* Botón de links pequeño */
+    .link-btn {
+        gap: 2px;
+        background-color: #e0770091;
+        font-size: 0.60rem;
+        padding: 4px 8px;
+        margin: 2px;
+    }
+}

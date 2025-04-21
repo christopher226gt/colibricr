@@ -1,0 +1,96 @@
+/* ------------------------- */
+/* Sección: Ubicación        */
+/* ------------------------- */
+
+#ubicacion {
+    font-family: Arial, sans-serif;
+    background-color: #f5f1eb;
+    padding: 20px;
+}
+
+/* Título de sección */
+.titulo {
+    text-align: center;
+    color: #a3682d;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Contenedor general */
+.contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Texto de descripción */
+.texto {
+    font-size: 18px;
+    color: #5a4632;
+    margin-bottom: 10px;
+}
+
+/* Botones de mapa (Waze / Google Maps) */
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.botones a img {
+    width: 150px;
+    height: auto;
+}
+
+/* Formulario de contacto */
+.formulario {
+    background: #f5f1eb;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario button {
+    width: 100%;
+    background: #a3682d;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* ------------------------- */
+/* Responsive                */
+/* ------------------------- */
+@media (max-width: 768px) {
+    .texto {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .formulario h3 {
+        text-align: center;
+    }
+
+    .botones {
+        justify-content: center;
+    }
+
+    .botones a img {
+        width: 120px;
+    }
+
+    .formulario button {
+        font-size: 14px;
+    }
+}

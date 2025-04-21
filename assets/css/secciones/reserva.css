@@ -1,0 +1,43 @@
+/* ------------------------- */
+/* Reserva                   */
+/* ------------------------- */
+.reserva {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+.reserva h2 {
+    color: #C86E0B;
+    font-weight: bold;
+}
+
+.reserva p {
+    color: #5a4228;
+    font-size: 20px;
+}
+
+.btn-reservar {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: #e07a00;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.btn-reservar:hover {
+    background-color: #d16e06;
+}
+
+.aviso {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #a94442 !important;
+}

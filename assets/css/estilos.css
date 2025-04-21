@@ -1,0 +1,23 @@
+@import url('secciones/topbar.css');  
+@import url('secciones/navbar.css');
+@import url('secciones/slider.css');
+@import url('secciones/amenities.css');
+@import url('secciones/habitaciones.css');
+@import url('secciones/explora.css');
+@import url('secciones/galeria.css');
+@import url('secciones/ubicacontacto.css');
+@import url('secciones/reserva.css');
+@import url('secciones/footer.css');
+@import url('secciones/botones_flotantes.css');
+@import url('secciones/rooms_section.css');
+
+/* ------------------------- */
+/* Estilos generales         */
+/* ------------------------- */
+body {
+    font-family: Arial, sans-serif;
+}
+
+section[id] {
+    scroll-margin-top: 100px;
+}

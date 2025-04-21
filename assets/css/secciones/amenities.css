@@ -1,0 +1,84 @@
+/* ------------------------- */
+/* Amenities                 */
+/* ------------------------- */
+.amenities {
+    text-align: center;
+    background: #f8f4ee;
+    padding: 40px 20px;
+}
+
+.amenities h2 {
+    color: #c77734;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.amenities p {
+    color: #5a4228;
+    font-size: 16px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.amenities-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.amenity {
+    position: relative;
+    background: #e8dfd5;
+    padding: 25px;
+    border-radius: 15px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.amenity:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    background-color: #c77734;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.icon img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+.amenity p {
+    color: #5a4228;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .amenities-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .amenity {
+        width: 90%;
+    }
+}

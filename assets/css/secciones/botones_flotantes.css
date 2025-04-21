@@ -1,0 +1,106 @@
+/* ------------------------- */
+/* Botón independiente       */
+/* ------------------------- */
+.btn-wrapper {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/* Estilos generales para botones flotantes */
+.btn-top, .btn-whatsapp {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  /* Botón "Ir Arriba" */
+  .btn-top {
+    background-color: #d97706; /* Color naranja */
+    right: 20px;
+    bottom: 20px;
+    display: none; /* Se ocultará hasta que el usuario haga scroll */
+  }
+  
+  .btn-top:hover {
+    background-color: #b55d04;
+  }
+  
+  /* Botón de WhatsApp */
+  .btn-whatsapp {
+    background-color: #25d366; /* Color de WhatsApp */
+    right: 20px;
+    bottom: 80px;
+    text-decoration: none;
+  }
+  
+  .btn-whatsapp:hover {
+    background-color: #1ebe57;
+  }
+
+  
+/* Botón flotante de cambio de idioma */
+.btn-language {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    background-color: #007bff; /* Azul */
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    right: 20px;
+    bottom: 140px; /* Ajustado para que no se sobreponga con WhatsApp */
+}
+
+/* Hover del botón de idioma */
+.btn-language:hover {
+    background-color: #0056b3;
+}
+
+/* Menú desplegable oculto por defecto */
+.language-menu {
+    position: absolute;
+    bottom: 60px;
+    right: 5px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    display: none; /* El menú está oculto por defecto */
+}
+
+/* Selector de idioma dentro del menú */
+.language-menu select {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+}
